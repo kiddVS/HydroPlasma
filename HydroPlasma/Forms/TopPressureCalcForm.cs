@@ -104,7 +104,18 @@ namespace HydroPlasma.Forms
             //修改坐标轴标题
             this.chartMaxPre.ChartAreas[0].AxisX.Title = "电容器储存能量 J";
             this.chartMaxPre.ChartAreas[0].AxisY.Title = "峰值压力 MPa";
+            //不显示网格线
+            this.chartMaxPre.ChartAreas[0].AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            this.chartMaxPre.ChartAreas[0].AxisX.ArrowStyle = AxisArrowStyle.Triangle;
+            this.chartMaxPre.ChartAreas[0].AxisY.ArrowStyle = AxisArrowStyle.Triangle;
+            // this.chartMaxPre.ChartAreas[0].AxisX.IsMarginVisible = false;
+            TickMark t = new TickMark();
+            t.TickMarkStyle = TickMarkStyle.None;
+            this.chartMaxPre.ChartAreas[0].AxisX.MajorTickMark = t;
+            this.chartMaxPre.ChartAreas[0].AxisY.MajorTickMark = t;
 
+
+            //this.chartMaxPre.ChartAreas[0].AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
         }
 
         private MaxPressureModel InitailData()
