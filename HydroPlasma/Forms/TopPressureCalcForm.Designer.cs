@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSaveData = new System.Windows.Forms.Button();
             this.btnSaveImg = new System.Windows.Forms.Button();
@@ -57,6 +57,10 @@
             this.chartMaxPre = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tbCapacityMaxNum = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.tbLineNum = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartMaxPre)).BeginInit();
@@ -64,6 +68,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.tbLineNum);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.tbCapacityMaxNum);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.btnSaveData);
@@ -89,7 +97,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(775, 194);
+            this.groupBox1.Size = new System.Drawing.Size(775, 226);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "计算参数";
@@ -97,27 +105,27 @@
             // 
             // btnSaveData
             // 
-            this.btnSaveData.Location = new System.Drawing.Point(554, 129);
+            this.btnSaveData.Location = new System.Drawing.Point(297, 179);
             this.btnSaveData.Name = "btnSaveData";
-            this.btnSaveData.Size = new System.Drawing.Size(109, 23);
+            this.btnSaveData.Size = new System.Drawing.Size(109, 41);
             this.btnSaveData.TabIndex = 18;
             this.btnSaveData.Text = "导出数据";
             this.btnSaveData.UseVisualStyleBackColor = true;
             // 
             // btnSaveImg
             // 
-            this.btnSaveImg.Location = new System.Drawing.Point(554, 158);
+            this.btnSaveImg.Location = new System.Drawing.Point(466, 179);
             this.btnSaveImg.Name = "btnSaveImg";
-            this.btnSaveImg.Size = new System.Drawing.Size(109, 23);
+            this.btnSaveImg.Size = new System.Drawing.Size(109, 41);
             this.btnSaveImg.TabIndex = 17;
             this.btnSaveImg.Text = "保存图片";
             this.btnSaveImg.UseVisualStyleBackColor = true;
             // 
             // btnCalcMaxPre
             // 
-            this.btnCalcMaxPre.Location = new System.Drawing.Point(554, 91);
+            this.btnCalcMaxPre.Location = new System.Drawing.Point(115, 179);
             this.btnCalcMaxPre.Name = "btnCalcMaxPre";
-            this.btnCalcMaxPre.Size = new System.Drawing.Size(109, 23);
+            this.btnCalcMaxPre.Size = new System.Drawing.Size(109, 41);
             this.btnCalcMaxPre.TabIndex = 16;
             this.btnCalcMaxPre.Text = "开始计算";
             this.btnCalcMaxPre.UseVisualStyleBackColor = true;
@@ -125,18 +133,18 @@
             // 
             // tbMaxProbeLength
             // 
-            this.tbMaxProbeLength.Location = new System.Drawing.Point(625, 50);
+            this.tbMaxProbeLength.Location = new System.Drawing.Point(625, 67);
             this.tbMaxProbeLength.Name = "tbMaxProbeLength";
-            this.tbMaxProbeLength.Size = new System.Drawing.Size(100, 25);
+            this.tbMaxProbeLength.Size = new System.Drawing.Size(144, 25);
             this.tbMaxProbeLength.TabIndex = 15;
-            this.tbMaxProbeLength.Text = "50";
+            this.tbMaxProbeLength.Text = "30";
             this.tbMaxProbeLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(500, 60);
+            this.label9.Location = new System.Drawing.Point(498, 72);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(121, 15);
             this.label9.TabIndex = 14;
@@ -144,9 +152,9 @@
             // 
             // tbMinProbeLength
             // 
-            this.tbMinProbeLength.Location = new System.Drawing.Point(625, 11);
+            this.tbMinProbeLength.Location = new System.Drawing.Point(625, 25);
             this.tbMinProbeLength.Name = "tbMinProbeLength";
-            this.tbMinProbeLength.Size = new System.Drawing.Size(100, 25);
+            this.tbMinProbeLength.Size = new System.Drawing.Size(144, 25);
             this.tbMinProbeLength.TabIndex = 13;
             this.tbMinProbeLength.Text = "10";
             this.tbMinProbeLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -154,7 +162,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(500, 21);
+            this.label8.Location = new System.Drawing.Point(498, 28);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(121, 15);
             this.label8.TabIndex = 12;
@@ -164,8 +172,10 @@
             // 
             this.tbOutputVoltage.Location = new System.Drawing.Point(379, 148);
             this.tbOutputVoltage.Name = "tbOutputVoltage";
-            this.tbOutputVoltage.Size = new System.Drawing.Size(100, 25);
+            this.tbOutputVoltage.Size = new System.Drawing.Size(115, 25);
             this.tbOutputVoltage.TabIndex = 11;
+            this.tbOutputVoltage.Text = "20";
+            this.tbOutputVoltage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
@@ -180,15 +190,19 @@
             // 
             this.tbCapacityMinNum.Location = new System.Drawing.Point(379, 72);
             this.tbCapacityMinNum.Name = "tbCapacityMinNum";
-            this.tbCapacityMinNum.Size = new System.Drawing.Size(100, 25);
+            this.tbCapacityMinNum.Size = new System.Drawing.Size(113, 25);
             this.tbCapacityMinNum.TabIndex = 5;
+            this.tbCapacityMinNum.Text = "1";
+            this.tbCapacityMinNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbCapacityVal
             // 
             this.tbCapacityVal.Location = new System.Drawing.Point(379, 25);
             this.tbCapacityVal.Name = "tbCapacityVal";
-            this.tbCapacityVal.Size = new System.Drawing.Size(100, 25);
+            this.tbCapacityVal.Size = new System.Drawing.Size(113, 25);
             this.tbCapacityVal.TabIndex = 9;
+            this.tbCapacityVal.Text = "0.5";
+            this.tbCapacityVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -210,9 +224,9 @@
             // 
             // tbComplexFuncBeita
             // 
-            this.tbComplexFuncBeita.Location = new System.Drawing.Point(142, 148);
+            this.tbComplexFuncBeita.Location = new System.Drawing.Point(136, 148);
             this.tbComplexFuncBeita.Name = "tbComplexFuncBeita";
-            this.tbComplexFuncBeita.Size = new System.Drawing.Size(100, 25);
+            this.tbComplexFuncBeita.Size = new System.Drawing.Size(112, 25);
             this.tbComplexFuncBeita.TabIndex = 7;
             this.tbComplexFuncBeita.Text = "0.7";
             this.tbComplexFuncBeita.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -228,9 +242,9 @@
             // 
             // tbPulseWidth
             // 
-            this.tbPulseWidth.Location = new System.Drawing.Point(143, 115);
+            this.tbPulseWidth.Location = new System.Drawing.Point(136, 110);
             this.tbPulseWidth.Name = "tbPulseWidth";
-            this.tbPulseWidth.Size = new System.Drawing.Size(100, 25);
+            this.tbPulseWidth.Size = new System.Drawing.Size(112, 25);
             this.tbPulseWidth.TabIndex = 5;
             this.tbPulseWidth.Text = "20";
             this.tbPulseWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -246,9 +260,9 @@
             // 
             // tbPulseUpTime
             // 
-            this.tbPulseUpTime.Location = new System.Drawing.Point(143, 72);
+            this.tbPulseUpTime.Location = new System.Drawing.Point(136, 72);
             this.tbPulseUpTime.Name = "tbPulseUpTime";
-            this.tbPulseUpTime.Size = new System.Drawing.Size(100, 25);
+            this.tbPulseUpTime.Size = new System.Drawing.Size(112, 25);
             this.tbPulseUpTime.TabIndex = 3;
             this.tbPulseUpTime.Text = "8";
             this.tbPulseUpTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -264,9 +278,9 @@
             // 
             // tbDensity
             // 
-            this.tbDensity.Location = new System.Drawing.Point(142, 25);
+            this.tbDensity.Location = new System.Drawing.Point(136, 25);
             this.tbDensity.Name = "tbDensity";
-            this.tbDensity.Size = new System.Drawing.Size(100, 25);
+            this.tbDensity.Size = new System.Drawing.Size(112, 25);
             this.tbDensity.TabIndex = 1;
             this.tbDensity.Text = "1000";
             this.tbDensity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -283,27 +297,27 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.chartMaxPre);
-            this.groupBox2.Location = new System.Drawing.Point(12, 212);
+            this.groupBox2.Location = new System.Drawing.Point(12, 244);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(775, 357);
+            this.groupBox2.Size = new System.Drawing.Size(775, 376);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "计算结果";
             // 
             // chartMaxPre
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartMaxPre.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartMaxPre.Legends.Add(legend2);
-            this.chartMaxPre.Location = new System.Drawing.Point(10, 24);
+            chartArea8.Name = "ChartArea1";
+            this.chartMaxPre.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chartMaxPre.Legends.Add(legend8);
+            this.chartMaxPre.Location = new System.Drawing.Point(16, 24);
             this.chartMaxPre.Name = "chartMaxPre";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartMaxPre.Series.Add(series2);
-            this.chartMaxPre.Size = new System.Drawing.Size(759, 327);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chartMaxPre.Series.Add(series8);
+            this.chartMaxPre.Size = new System.Drawing.Size(759, 359);
             this.chartMaxPre.TabIndex = 0;
             this.chartMaxPre.Text = "液相冲击波峰值压力图";
             // 
@@ -311,27 +325,69 @@
             // 
             this.tbCapacityMaxNum.Location = new System.Drawing.Point(380, 110);
             this.tbCapacityMaxNum.Name = "tbCapacityMaxNum";
-            this.tbCapacityMaxNum.Size = new System.Drawing.Size(100, 25);
+            this.tbCapacityMaxNum.Size = new System.Drawing.Size(114, 25);
             this.tbCapacityMaxNum.TabIndex = 20;
+            this.tbCapacityMaxNum.Text = "10";
+            this.tbCapacityMaxNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(255, 115);
+            this.label10.Location = new System.Drawing.Point(254, 113);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(120, 15);
             this.label10.TabIndex = 19;
             this.label10.Text = "电容最大个数 个";
             // 
+            // tbLineNum
+            // 
+            this.tbLineNum.Location = new System.Drawing.Point(625, 110);
+            this.tbLineNum.Name = "tbLineNum";
+            this.tbLineNum.Size = new System.Drawing.Size(144, 25);
+            this.tbLineNum.TabIndex = 22;
+            this.tbLineNum.Text = "3";
+            this.tbLineNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.Control;
+            this.label11.Location = new System.Drawing.Point(500, 115);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 15);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "线型条数 ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(500, 151);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 15);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "横坐标";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "电容器储存能量",
+            "电极间距"});
+            this.comboBox1.Location = new System.Drawing.Point(625, 150);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(144, 23);
+            this.comboBox1.TabIndex = 24;
+            // 
             // TopPressureCalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 581);
+            this.ClientSize = new System.Drawing.Size(822, 632);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "TopPressureCalcForm";
             this.Text = "液相冲击波峰值压力计算";
+            this.Load += new System.EventHandler(this.TopPressureCalcForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -368,5 +424,9 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMaxPre;
         private System.Windows.Forms.TextBox tbCapacityMaxNum;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbLineNum;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label12;
     }
 }

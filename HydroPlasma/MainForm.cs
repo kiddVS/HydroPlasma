@@ -16,6 +16,7 @@ namespace HydroPlasma
         public MainForm()
         {
             InitializeComponent();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         }
         private void MainForm_Show(object sender, EventArgs e)
         { treeView1.SelectedNode = null; }
@@ -57,6 +58,7 @@ namespace HydroPlasma
                     break;
             }
         }
+
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             switch (e.Node.Text)
