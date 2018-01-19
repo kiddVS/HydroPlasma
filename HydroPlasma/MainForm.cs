@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HydroPlasma.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +17,57 @@ namespace HydroPlasma
         {
             InitializeComponent();
         }
-
+        private void MainForm_Show(object sender, EventArgs e)
+        { treeView1.SelectedNode = null; }
         private void MainForm_Load(object sender, EventArgs e)
         {
+            treeView1.SelectedNode = null;
+          
+        }
+        private void treeView1_NodeMouseClick(object sender, TreeViewEventArgs e)
+        {
+            switch (e.Node.Text)
+            {
+                case "液相放电峰值压力计算":
+                    TopPressureCalcForm form = new TopPressureCalcForm();
+                    form.Show();
+                    break;
+            }
+        }
+        private void treeView1_BeforeSelect(object sender, TreeViewCancelEventArgs e)
+        {
+            if (e.Action == TreeViewAction.Unknown)
+                e.Cancel = true;
+        }
+        private void treeView1_VisibleChanged(object sender, EventArgs e)
+        {
+            if (treeView1.Visible)
+            {
+                treeView1.SelectedNode = null;
+            }
+        }
+        private void treeView1_DoubleClick(object sender, TreeViewCancelEventArgs e) {
+            switch (e.Node.Text)
+            {
+                case "液相放电峰值压力计算":
+                    TopPressureCalcForm form = new TopPressureCalcForm();
+                    form.TopMost = true;                  
+                    form.ShowDialog();
+                    form.BringToFront();
+                    break;
+            }
+        }
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            switch (e.Node.Text)
+            {
+                case "液相放电峰值压力计算":
+                    TopPressureCalcForm form = new TopPressureCalcForm();
+                    form.TopMost = true;
 
+                    form.Show();
+                    break;
+            }
         }
     }
 }
