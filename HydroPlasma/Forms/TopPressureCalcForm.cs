@@ -93,7 +93,7 @@ namespace HydroPlasma.Forms
                 //画图
                 Series ss = new Series( "电极距离"+currentProbeLength+"mm");
                 ss.Points.DataBindXY(energyArr, maxPressureArr);
-               
+                ss.BorderWidth = 3;
                 ss.ChartType = SeriesChartType.Spline;
                 this.chartMaxPre.Series.Add(ss);
             }
@@ -101,6 +101,10 @@ namespace HydroPlasma.Forms
             int maxX2 = ((int)maxX / 100 + 1) * 100;
             this.chartMaxPre.ChartAreas[0].AxisX.Minimum = 0;
             this.chartMaxPre.ChartAreas[0].AxisX.Maximum = maxX2;
+            //修改坐标轴标题
+            this.chartMaxPre.ChartAreas[0].AxisX.Title = "电容器储存能量 J";
+            this.chartMaxPre.ChartAreas[0].AxisY.Title = "峰值压力 MPa";
+
         }
 
         private MaxPressureModel InitailData()
