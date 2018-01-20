@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbLineNum = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbCapacityMaxNum = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnSaveData = new System.Windows.Forms.Button();
             this.btnSaveImg = new System.Windows.Forms.Button();
             this.btnCalcMaxPre = new System.Windows.Forms.Button();
@@ -55,12 +61,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.chartMaxPre = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tbCapacityMaxNum = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbLineNum = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartMaxPre)).BeginInit();
@@ -68,6 +69,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.tbLineNum);
@@ -103,27 +105,86 @@
             this.groupBox1.Text = "计算参数";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "电容器储存能量",
+            "电极间距"});
+            this.comboBox1.Location = new System.Drawing.Point(625, 150);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(144, 23);
+            this.comboBox1.TabIndex = 24;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(500, 151);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 15);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "横坐标";
+            // 
+            // tbLineNum
+            // 
+            this.tbLineNum.Location = new System.Drawing.Point(625, 110);
+            this.tbLineNum.Name = "tbLineNum";
+            this.tbLineNum.Size = new System.Drawing.Size(144, 25);
+            this.tbLineNum.TabIndex = 22;
+            this.tbLineNum.Text = "3";
+            this.tbLineNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.Control;
+            this.label11.Location = new System.Drawing.Point(500, 115);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 15);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "线型条数 ";
+            // 
+            // tbCapacityMaxNum
+            // 
+            this.tbCapacityMaxNum.Location = new System.Drawing.Point(380, 110);
+            this.tbCapacityMaxNum.Name = "tbCapacityMaxNum";
+            this.tbCapacityMaxNum.Size = new System.Drawing.Size(114, 25);
+            this.tbCapacityMaxNum.TabIndex = 20;
+            this.tbCapacityMaxNum.Text = "10";
+            this.tbCapacityMaxNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(254, 113);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(120, 15);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "电容最大个数 个";
+            // 
             // btnSaveData
             // 
-            this.btnSaveData.Location = new System.Drawing.Point(297, 179);
+            this.btnSaveData.Location = new System.Drawing.Point(265, 179);
             this.btnSaveData.Name = "btnSaveData";
             this.btnSaveData.Size = new System.Drawing.Size(109, 41);
             this.btnSaveData.TabIndex = 18;
             this.btnSaveData.Text = "导出数据";
             this.btnSaveData.UseVisualStyleBackColor = true;
+            this.btnSaveData.Click += new System.EventHandler(this.btnSaveData_Click);
             // 
             // btnSaveImg
             // 
-            this.btnSaveImg.Location = new System.Drawing.Point(466, 179);
+            this.btnSaveImg.Location = new System.Drawing.Point(443, 179);
             this.btnSaveImg.Name = "btnSaveImg";
             this.btnSaveImg.Size = new System.Drawing.Size(109, 41);
             this.btnSaveImg.TabIndex = 17;
             this.btnSaveImg.Text = "保存图片";
             this.btnSaveImg.UseVisualStyleBackColor = true;
+            this.btnSaveImg.Click += new System.EventHandler(this.btnSaveImg_Click);
             // 
             // btnCalcMaxPre
             // 
-            this.btnCalcMaxPre.Location = new System.Drawing.Point(115, 179);
+            this.btnCalcMaxPre.Location = new System.Drawing.Point(72, 179);
             this.btnCalcMaxPre.Name = "btnCalcMaxPre";
             this.btnCalcMaxPre.Size = new System.Drawing.Size(109, 41);
             this.btnCalcMaxPre.TabIndex = 16;
@@ -306,77 +367,30 @@
             // 
             // chartMaxPre
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chartMaxPre.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chartMaxPre.Legends.Add(legend8);
+            chartArea2.Name = "ChartArea1";
+            this.chartMaxPre.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartMaxPre.Legends.Add(legend2);
             this.chartMaxPre.Location = new System.Drawing.Point(16, 24);
             this.chartMaxPre.Name = "chartMaxPre";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chartMaxPre.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartMaxPre.Series.Add(series2);
             this.chartMaxPre.Size = new System.Drawing.Size(759, 359);
             this.chartMaxPre.TabIndex = 0;
             this.chartMaxPre.Text = "液相冲击波峰值压力图";
             // 
-            // tbCapacityMaxNum
+            // btnExit
             // 
-            this.tbCapacityMaxNum.Location = new System.Drawing.Point(380, 110);
-            this.tbCapacityMaxNum.Name = "tbCapacityMaxNum";
-            this.tbCapacityMaxNum.Size = new System.Drawing.Size(114, 25);
-            this.tbCapacityMaxNum.TabIndex = 20;
-            this.tbCapacityMaxNum.Text = "10";
-            this.tbCapacityMaxNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(254, 113);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(120, 15);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "电容最大个数 个";
-            // 
-            // tbLineNum
-            // 
-            this.tbLineNum.Location = new System.Drawing.Point(625, 110);
-            this.tbLineNum.Name = "tbLineNum";
-            this.tbLineNum.Size = new System.Drawing.Size(144, 25);
-            this.tbLineNum.TabIndex = 22;
-            this.tbLineNum.Text = "3";
-            this.tbLineNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.Control;
-            this.label11.Location = new System.Drawing.Point(500, 115);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 15);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "线型条数 ";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(500, 151);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 15);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "横坐标";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "电容器储存能量",
-            "电极间距"});
-            this.comboBox1.Location = new System.Drawing.Point(625, 150);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(144, 23);
-            this.comboBox1.TabIndex = 24;
+            this.btnExit.Location = new System.Drawing.Point(625, 179);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(113, 41);
+            this.btnExit.TabIndex = 25;
+            this.btnExit.Text = "退出";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // TopPressureCalcForm
             // 
@@ -428,5 +442,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnExit;
     }
 }

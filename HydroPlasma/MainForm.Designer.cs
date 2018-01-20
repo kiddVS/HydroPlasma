@@ -90,7 +90,7 @@
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2});
-            this.treeView1.Size = new System.Drawing.Size(187, 627);
+            this.treeView1.Size = new System.Drawing.Size(217, 627);
             this.treeView1.TabIndex = 2;
             this.treeView1.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView1_BeforeSelect);
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -100,9 +100,9 @@
             this.panel1.AutoSize = true;
             this.panel1.BackgroundImage = global::HydroPlasma.Properties.Resources.MainBac;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(193, 31);
+            this.panel1.Location = new System.Drawing.Point(223, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(825, 627);
+            this.panel1.Size = new System.Drawing.Size(795, 627);
             this.panel1.TabIndex = 3;
             // 
             // MainForm
