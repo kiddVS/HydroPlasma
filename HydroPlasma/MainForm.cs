@@ -23,7 +23,7 @@ namespace HydroPlasma
         private void MainForm_Load(object sender, EventArgs e)
         {
             treeView1.SelectedNode = null;
-          
+
         }
         private void treeView1_NodeMouseClick(object sender, TreeViewEventArgs e)
         {
@@ -32,6 +32,10 @@ namespace HydroPlasma
                 case "液相放电峰值压力计算":
                     TopPressureCalcForm form = new TopPressureCalcForm();
                     form.Show();
+                    break;
+                case "冲击波衰减特性计算":
+                    PressureFallForm form1 = new PressureFallForm();
+                    form1.Show();
                     break;
             }
         }
@@ -47,12 +51,13 @@ namespace HydroPlasma
                 treeView1.SelectedNode = null;
             }
         }
-        private void treeView1_DoubleClick(object sender, TreeViewCancelEventArgs e) {
+        private void treeView1_DoubleClick(object sender, TreeViewCancelEventArgs e)
+        {
             switch (e.Node.Text)
             {
                 case "液相放电峰值压力计算":
                     TopPressureCalcForm form = new TopPressureCalcForm();
-                    form.TopMost = true;                  
+                    form.TopMost = true;
                     form.ShowDialog();
                     form.BringToFront();
                     break;
@@ -66,8 +71,12 @@ namespace HydroPlasma
                 case "液相放电峰值压力计算":
                     TopPressureCalcForm form = new TopPressureCalcForm();
                     form.TopMost = true;
-
                     form.Show();
+                    break;
+                case "冲击波衰减特性计算":
+                    PressureFallForm form1 = new PressureFallForm();
+                    form1.TopMost = true;
+                    form1.Show();
                     break;
             }
         }
