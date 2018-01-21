@@ -58,6 +58,13 @@
     <Compile Include="Forms\TopPressureCalcForm.Designer.cs">
       <DependentUpon>TopPressureCalcForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\WelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUtils.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TopPressureCalcForm.resx">
       <DependentUpon>TopPressureCalcForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -108,6 +118,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MainBac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\78eedf84abe1adbdab7101534c7a4ae9 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2c42745bb6d75e9801e5856e5ff0fc64.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4d80482282bc2766d88491fafe590626.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

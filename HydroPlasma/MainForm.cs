@@ -58,8 +58,7 @@ namespace HydroPlasma
                 case "液相放电峰值压力计算":
                     TopPressureCalcForm form = new TopPressureCalcForm();
                     form.TopMost = true;
-                    form.ShowDialog();
-                    form.BringToFront();
+                    form.Show();
                     break;
             }
         }
@@ -79,6 +78,25 @@ namespace HydroPlasma
                     form1.Show();
                     break;
             }
+        }
+
+        private void 帮助ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("液相放电等离子冲击波传播规律计算软件 v1");
+        }
+
+        private void 液相放电峰值压力ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TopPressureCalcForm form = new TopPressureCalcForm();
+            form.TopMost = true;
+            form.Show();
+        }
+
+        private void 冲击波衰减特性计算ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PressureFallForm form1 = new PressureFallForm();
+            form1.TopMost = true;
+            form1.Show();
         }
     }
 }

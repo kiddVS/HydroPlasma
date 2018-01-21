@@ -109,5 +109,52 @@ namespace HydroPlasma.Forms
             };
             return model;
         }
+
+        private void btnSaveData_Click(object sender, EventArgs e)
+        {
+            FormUtils.SavePressureData("距离", this.chartMaxPre);
+        }
+
+        private void btnSaveImg_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog fileDialog = new SaveFileDialog();
+            fileDialog.Filter = "All files (*.*)|*.*|图片 (*.Png)|*.Png";
+            fileDialog.FilterIndex = 2;
+            fileDialog.InitialDirectory = Application.StartupPath;
+            string fileName = Guid.NewGuid().ToString();
+            fileDialog.FileName = fileName;
+            if (fileDialog.ShowDialog() == DialogResult.OK && fileDialog.FileName != "")
+            {
+                fileName = fileDialog.FileName;
+            }
+            //文件流
+            //using (FileStream fs = new FileStream(fileName, FileMode.CreateNew))
+            //{
+            //    //获得图像
+            //    var images = this.chartMaxPre.Images;
+            //    Image image = images.FirstOrDefault().Image;
+            //    image.Save(fs);
+            //}
+            //var images = this.chartMaxPre.;
+            //Image image = images.FirstOrDefault().Image;
+            //image.Save(fileName);
+            //MessageBox.Show("图像保存成功");
+            try
+            {
+                this.chartMaxPre.SaveImage(fileName, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
+                MessageBox.Show("图像保存成功");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("图像保存失败，请重试");
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("确定要退出吗？", "提示", MessageBoxButtons.OKCancel);
+            if (dr == DialogResult.OK) ;
+            this.Close();
+        }
     }
 }

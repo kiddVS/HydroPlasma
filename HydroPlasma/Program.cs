@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HydroPlasma.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,9 @@ namespace HydroPlasma
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new WelcomeForm());
             Application.Run(new MainForm());
+
         }
     }
 }

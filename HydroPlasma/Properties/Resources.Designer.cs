@@ -63,9 +63,39 @@ namespace HydroPlasma.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap _2c42745bb6d75e9801e5856e5ff0fc64 {
+            get {
+                object obj = ResourceManager.GetObject("2c42745bb6d75e9801e5856e5ff0fc64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap _445be6bde0e009cda5208716f9763a21 {
             get {
                 object obj = ResourceManager.GetObject("445be6bde0e009cda5208716f9763a21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _4d80482282bc2766d88491fafe590626 {
+            get {
+                object obj = ResourceManager.GetObject("4d80482282bc2766d88491fafe590626", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _78eedf84abe1adbdab7101534c7a4ae9__1_ {
+            get {
+                object obj = ResourceManager.GetObject("78eedf84abe1adbdab7101534c7a4ae9 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
