@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Plasam2Explosive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Plasam2Explosive.Designer.cs">
+      <DependentUpon>Plasam2Explosive.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PressureFallForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Model\WaveShuaiJianModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Plasam2Explosive.resx">
+      <DependentUpon>Plasam2Explosive.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PressureFallForm.resx">
       <DependentUpon>PressureFallForm.cs</DependentUpon>
     </EmbeddedResource>

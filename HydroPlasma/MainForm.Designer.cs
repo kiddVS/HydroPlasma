@@ -30,16 +30,17 @@ namespace HydroPlasma
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("液相放电峰值压力计算");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("冲击波衰减特性计算");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("液相放电与水下炸药转换");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("液相放电峰值压力计算");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("冲击波衰减特性计算");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.计算ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.液相放电峰值压力ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.冲击波衰减特性计算ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,32 +80,6 @@ namespace HydroPlasma
             this.计算ToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.计算ToolStripMenuItem.Text = "计算";
             // 
-            // 帮助ToolStripMenuItem
-            // 
-            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
-            this.帮助ToolStripMenuItem.Text = "关于";
-            this.帮助ToolStripMenuItem.Click += new System.EventHandler(this.帮助ToolStripMenuItem_Click);
-            // 
-            // treeView1
-            // 
-            this.treeView1.HideSelection = false;
-            this.treeView1.Location = new System.Drawing.Point(12, 31);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "节点0";
-            treeNode1.NodeFont = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            treeNode1.Text = "液相放电峰值压力计算";
-            treeNode2.Name = "节点1";
-            treeNode2.NodeFont = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            treeNode2.Text = "冲击波衰减特性计算";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            this.treeView1.Size = new System.Drawing.Size(297, 768);
-            this.treeView1.TabIndex = 2;
-            this.treeView1.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView1_BeforeSelect);
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            // 
             // 液相放电峰值压力ToolStripMenuItem
             // 
             this.液相放电峰值压力ToolStripMenuItem.Name = "液相放电峰值压力ToolStripMenuItem";
@@ -119,14 +94,45 @@ namespace HydroPlasma
             this.冲击波衰减特性计算ToolStripMenuItem.Text = "冲击波衰减特性计算";
             this.冲击波衰减特性计算ToolStripMenuItem.Click += new System.EventHandler(this.冲击波衰减特性计算ToolStripMenuItem_Click);
             // 
+            // 帮助ToolStripMenuItem
+            // 
+            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
+            this.帮助ToolStripMenuItem.Text = "关于";
+            this.帮助ToolStripMenuItem.Click += new System.EventHandler(this.帮助ToolStripMenuItem_Click);
+            // 
+            // treeView1
+            // 
+            this.treeView1.Font = new System.Drawing.Font("黑体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.treeView1.HideSelection = false;
+            this.treeView1.Location = new System.Drawing.Point(12, 31);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "节点1";
+            treeNode1.NodeFont = new System.Drawing.Font("黑体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            treeNode1.Text = "液相放电与水下炸药转换";
+            treeNode2.Name = "节点0";
+            treeNode2.NodeFont = new System.Drawing.Font("黑体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            treeNode2.Text = "液相放电峰值压力计算";
+            treeNode3.Name = "节点1";
+            treeNode3.NodeFont = new System.Drawing.Font("黑体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            treeNode3.Text = "冲击波衰减特性计算";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            this.treeView1.Size = new System.Drawing.Size(278, 768);
+            this.treeView1.TabIndex = 2;
+            this.treeView1.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView1_BeforeSelect);
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            // 
             // panel1
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackgroundImage = global::HydroPlasma.Properties.Resources._4d80482282bc2766d88491fafe590626;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(315, 31);
+            this.panel1.Location = new System.Drawing.Point(296, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(803, 768);
+            this.panel1.Size = new System.Drawing.Size(822, 768);
             this.panel1.TabIndex = 3;
             // 
             // MainForm

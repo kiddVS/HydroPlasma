@@ -77,6 +77,11 @@ namespace HydroPlasma
                     form1.TopMost = true;
                     form1.Show();
                     break;
+                case "液相放电与水下炸药转换":
+                    Plasam2Explosive form2 = new Plasam2Explosive();
+                    form2.TopMost = true;
+                    form2.Show();
+                    break;
             }
         }
 
