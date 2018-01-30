@@ -41,7 +41,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::HydroPlasma.Properties.Resources._4d80482282bc2766d88491fafe590626;
+            this.BackgroundImage = global::HydroPlasma.Properties.Resources._4d80482282bc2766d88491fafe590626__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1143, 858);
             this.DoubleBuffered = true;

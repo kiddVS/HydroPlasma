@@ -120,6 +120,7 @@ namespace HydroPlasma
             treeNode1,
             treeNode2,
             treeNode3});
+            this.treeView1.Scrollable = false;
             this.treeView1.Size = new System.Drawing.Size(278, 768);
             this.treeView1.TabIndex = 2;
             this.treeView1.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView1_BeforeSelect);
@@ -128,7 +129,7 @@ namespace HydroPlasma
             // panel1
             // 
             this.panel1.AutoSize = true;
-            this.panel1.BackgroundImage = global::HydroPlasma.Properties.Resources._4d80482282bc2766d88491fafe590626;
+            this.panel1.BackgroundImage = global::HydroPlasma.Properties.Resources._4d80482282bc2766d88491fafe590626__2_;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(296, 31);
             this.panel1.Name = "panel1";
