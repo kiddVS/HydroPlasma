@@ -89,6 +89,15 @@ namespace HydroPlasma.Forms
             if (fileDialog.ShowDialog() == DialogResult.OK && fileDialog.FileName != "")
             {
                 fileName = fileDialog.FileName;
+                try
+                {
+                    this.chartMaxPre.SaveImage(fileName, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
+                    MessageBox.Show("图像保存成功");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("图像保存失败，请重试");
+                }
             }
             //文件流
             //using (FileStream fs = new FileStream(fileName, FileMode.CreateNew))
@@ -101,16 +110,7 @@ namespace HydroPlasma.Forms
             //var images = this.chartMaxPre.;
             //Image image = images.FirstOrDefault().Image;
             //image.Save(fileName);
-            //MessageBox.Show("图像保存成功");
-            try
-            {
-                this.chartMaxPre.SaveImage(fileName, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
-                MessageBox.Show("图像保存成功");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("图像保存失败，请重试");
-            }
+            //MessageBox.Show("图像保存成功");            
         }
 
         private void btnSaveData_Click(object sender, EventArgs e)
